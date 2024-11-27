@@ -1,0 +1,254 @@
+.card{
+    width: 18rem;background-color: #775554 ;
+    color:#CDA08B;
+}
+.card-red{
+  width: 18rem;
+  background-color: #CDA08B ;
+}
+.card-darkblue{
+  width: 18rem;
+  background-color: #748cab ;
+}
+.card-text{
+    color: black;
+}
+ .addbtns-contener{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+ }
+ .addbtns{
+    background-color: transparent;
+    border: 0cm;
+    margin: 5px;
+ }
+ .addbtns img {
+  transition: filter 0.3s ease; /* Smooth transition for the color change */
+}
+.addbtns:hover img {
+  filter: brightness(1.75) saturate(1) contrast(1); /* Adjusted filters for SVGs */
+  transition: filter 0.3s ease; /* Smooth transition for hover effect */
+}
+ .smaller{
+    transform: scale(0.65);
+ }
+.fixedposition{
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    background-color: #C77C89;
+    display: flex;
+    justify-content: flex-start;
+    transform-origin: left center;
+}
+
+.red{
+    background-color: #C77C89;
+}
+.carve-left{border-radius: 25px 0 0 25px;}
+.carve-right{border-radius: 0 25px 25px 0;}
+
+@media (max-width: 1200px) {
+    .carve-left{border-radius:25px;}
+    .carve-right{border-radius:25px;}
+    .carve{border-radius:25px;}
+}
+@media (max-width: 768px) {
+  .card {
+    width: 100%;  /* Take full width on mobile */
+    margin-bottom: 15px;  /* Add spacing between cards */
+  }
+
+  .task-model {
+    width: 80%;  /* Smaller width for mobile devices */
+  }
+
+  .str-button {
+    font-size: 1rem;
+    padding: 0.5rem 15px;  /* Adjust padding for smaller screens */
+  }
+}
+@media (max-width: 576px) {
+  .task-model {
+    width: 90%;
+    top: 10%;
+  }
+}
+/* cardheader------------------------------------------------ */
+.card-title{
+    font-family:'Permanent Marker', cursive;font-weight: 400;font-style: normal;
+    background: #CDA08B;
+    -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+.str-button{
+  font-family:'Permanent Marker', cursive;font-weight: 400;font-style: normal;
+  color: #5C3D42 ;
+  padding: 0px 25px;
+  border: 2px solid #5C3D42;
+  border-radius: 50px;
+  margin: 10px;
+  background-color: transparent;
+  font-size: 1.2rem;
+}
+.str-button:hover {
+  background-color: #5C3D42;
+  color: #C77C89;
+  border-color: #5C3D42;
+  transform: scale(1.03);
+  transition: transform 0.2s ease;
+}
+.header-style {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .header-style .close {
+    position: absolute;
+    right: 1.5rem;
+    top: -0.3rem;
+    font-size: 1.5rem;
+    color: #ccc;
+  }
+  
+  .header-style .close:hover {
+    color: #343444;
+  }
+  /* overlay------------------------------------------------- */
+
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+#overlay.active {
+    display: block;
+}
+
+  /*taks-model without paragraph-------------------------------------- */
+  .inputs{
+    background: transparent; border: none; border-bottom: 2px solid #EE83A4; outline: none;
+  }
+
+  .close-model {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+  }
+  
+  .task-model {
+    width: 450px;
+    position: fixed;
+    height: auto;
+    top: -100%; /* Initially above the screen */
+    left: 50%;
+    color:#CDA08B;
+    transform: translate(-50%, -50%);
+    transition: top 0.6s ease-in-out, opacity 0.4s ease-in-out; /* Animate both top and opacity */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    z-index: 1000;
+    background-color: #775554;
+    opacity: 0; /* Initially invisible */
+    visibility: hidden; /* Ensure it's not interactable when hidden */
+}
+
+.task-model.active {
+    top: 30%; /* Drop the modal to the center */
+    opacity: 1; /* Make the modal fully visible */
+    visibility: visible; /* Make it interactable */
+    display: block; /* Ensure it displays when active */
+}
+
+  .task-model .body {
+    display: flex;         
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #todo_input,#todo_submit {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    margin: 0.25rem;
+  }
+  
+  #todo_submit {
+    background-color: transparent;
+    font-size: 1.25rem;
+    border: none;
+  }
+
+  .checklist-item {
+    padding: 5px;
+    background-color: transparent;
+    margin-bottom: 0px;
+  }
+
+  .remove-item:hover {
+    cursor: pointer;
+  }
+
+  /* -------------------------------------------------------------------------- */
+
+  #timer-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#timer {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #07102F; /* Match text color with the design */
+    z-index: 1;
+}
+
+button {
+    margin: 5px;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    transform: rotate(-90deg); /* Rotate to start from the top */
+}
+
+circle {
+    fill: none;
+    stroke-width: 7.5;
+}
+
+.background {
+    stroke: #D07383; /* Background circle color */
+}
+
+.progress {
+    stroke-dasharray: 424.11; /* Circumference of the circle (2πr) */
+    stroke-dashoffset: 0; /* Initially show full progress */
+    transition: stroke-dashoffset 1s linear; /* Smooth transition for progress */
+    stroke: url(#progressGradient); /* Apply gradient */
+}

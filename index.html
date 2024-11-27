@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/logo.png" type="image/jpeg" sizes="16x16">
+    <title>ToPomo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='css/font.css' rel='stylesheet'>
+    <style>
+        .custom-scrollbar {
+            scrollbar-width: thin;
+            scrollbar-color: #C77C89 transparent;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 5px;
+            display: none;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #C77C89;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            display: none;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-button {
+            display: none;
+        }
+    </style>
+</head>
+<body style="background-color: #775554;">
+    <div class="task-model" id="task_form">
+        <div class="card-body p-3">
+            <div class="header-style">
+                <div class="card-title" style="font-size: 1.5rem;">Task Form</div>
+              </div>
+              <div class="body">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <label for="todo_input" style="white-space: nowrap;">New Task: </label>
+                  <input type="text"class="inputs" id="todo_input" />
+                </div>
+                <div class="addbtns-contener py-3 mt-xl-1 px-2">
+                <div><button class="addbtns" id="todo_submit" type="submit"><img src="image/done_but.svg" style="border: 0;" alt="button"></button></div>
+                <div><button class="addbtns close-model"><img src="image/cancel.svg" style="border: 0;" alt="button"></button></div>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="task-model" id="paragraph_form">
+            <div class="card-body p-3">
+                <div class="header-style">
+                    <div class="card-title" style="font-size: 1.5rem;">Task With description Form</div>
+                </div>
+                <div class="body">
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label for="todo_input_paragraph" style="white-space: nowrap;">New Task: </label>
+                            <input type="text" class="inputs" id="todo_input_paragraph" />
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label for="paragraph_input" style="white-space: nowrap;">your Paragraph: </label>
+                            <input type="text" class="inputs" id="paragraph_input" />
+                        </div>
+                    </div>
+                    <div class="addbtns-contener py-3 mt-xl-1 px-2">
+                    <div><button class="addbtns" id="paragraph_submit" type="submit"><img src="image/done_but.svg" style="border: 0;" alt="button"></button></div>
+                    <div><button class="addbtns close-model"><img src="image/cancel.svg" style="border: 0;" alt="button"></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="task-model" id="deadline_form">
+            <div class="card-body p-3">
+                <div class="header-style">
+                    <div class="card-title" style="font-size: 1.5rem;">DeadLine Form</div>
+                </div>
+                <div class="body">
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label for="todo_input_deadline" style="white-space: nowrap;">New Task: </label>
+                            <input type="text" class="inputs" id="todo_input_deadline" />
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label for="day_input" style="white-space: nowrap;">day: </label>
+                            <input type="text" class="inputs" id="day_input" />
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label for="month_input" style="white-space: nowrap;">month: </label>
+                            <input type="text" class="inputs" id="month_input" />
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label for="year_input" style="white-space: nowrap;">year: </label>
+                            <input type="text" class="inputs" id="year_input" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="addbtns-contener py-3 mt-xl-1 px-2">
+                <div><button class="addbtns" id="deadline_submit" type="submit"><img src="image/done_but.svg" style="border: 0;" alt="button"></button></div>
+                <div><button class="addbtns close-model"><img src="image/cancel.svg" style="border: 0;" alt="button"></button></div>
+            </div>
+        </div>
+        <div class="task-model" id="atomic_form">
+            <div class="card-body p-3">
+                <div class="header-style">
+                    <div class="card-title" style="font-size: 1.5rem;">Atomic Form</div>
+                </div>
+                <div class="body">
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label for="habit_input" style="white-space: nowrap;">I Will: </label>
+                            <input type="text" class="inputs" id="habit_input" />
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label for="time_input" style="white-space: nowrap;">Time/Location: </label>
+                            <input type="text" class="inputs" id="time_input" />
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label for="outcome_input" style="white-space: nowrap;">So I can Become: </label>
+                            <input type="text" class="inputs" id="outcome_input" />
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;white-space: nowrap;overflow: hidden;">
+                            <label for="time-hours" style="white-space: nowrap;">Reminder:</label>
+                            <input  class="inputs" id="time-hours" placeholder="Hours">
+                            <input class = "inputs" id="time-minutes" placeholder="Minutes">
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 16px; margin-top: 8px;">
+                            <div>
+                                <input type="radio" id="am" name="time-format" value="AM">
+                                <label for="am">AM</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="pm" name="time-format" value="PM">
+                                <label for="pm">PM</label>
+                            </div>
+                        </div>
+                        <div id="time-list"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="addbtns-contener py-0 mt-xl-1 px-2">
+                <div><button class="addbtns" id="atomic_add" type="submit"><img src="image/add.svg" style="border: 0;" alt="button"></button></div>
+                <div><button class="addbtns close-model"><img src="image/cancel.svg" style="border: 0;" alt="button"></button></div>
+                </div>
+                <div class="addbtns-contener m-0 px-2"><button class="addbtns" id="atomic_submit" type="submit"><img src="image/done_but.svg" style="border: 0;" alt="button"></button></div>
+        </div>
+        <div class="task-model" id="checklist_form">
+            <div class="card-body p-3">
+                <div class="header-style">
+                    <div class="card-title" style="font-size: 1.5rem;">checklist Form</div>
+                </div>
+                <div class="body">
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label for="todo_input_checklist" style="white-space: nowrap;">New Task: </label>
+                            <input type="text" class="inputs" id="todo_input_checklist" />
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label for="checklist_input" style="white-space: nowrap;">your item: </label>
+                            <input type="text" class="inputs" id="checklist_input" />
+                        </div>
+                    </div>
+                    <div class="addbtns-contener py-0 mt-xl-1 px-2">
+                    <div><button class="addbtns" id="checklist_add" type="submit"><img src="image/add.svg" style="border: 0;" alt="button"></button></div>
+                    <div><button class="addbtns close-model"><img src="image/cancel.svg" style="border: 0;" alt="button"></button></div>
+                    </div>
+                    <div class="addbtns-contener m-0 px-2"><button class="addbtns" id="checklist_submit" type="submit"><img src="image/done_but.svg" style="border: 0;" alt="button"></button></div>
+                </div>
+            </div>
+        </div>
+        <div class="task-model" id="list_form">
+            <div class="card-body p-3">
+                <div class="header-style">
+                    <div class="card-title" style="font-size: 1.5rem;">List Form</div>
+                </div>
+                <div class="body">
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label for="todo_input_list" style="white-space: nowrap;">New Task: </label>
+                            <input type="text" class="inputs" id="todo_input_list" />
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label for="list_input" style="white-space: nowrap;">your item: </label>
+                            <input type="text" class="inputs" id="list_input" />
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 16px; margin-top: 8px;">
+                        <div>
+                            <input type="radio" id="ordered_list" name="list_type" value="ordered" checked>
+                            <label for="ordered_list">Ordered List</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="unordered_list" name="list_type" value="unordered">
+                            <label for="unordered_list">Unordered List</label>
+                        </div>
+                    </div>
+                    <div class="addbtns-contener py-0 mt-xl-1 px-2">
+                    <div><button class="addbtns" id="list_add" type="submit"><img src="image/add.svg" style="border: 0;" alt="button"></button></div>
+                    <div><button class="addbtns close-model"><img src="image/cancel.svg" style="border: 0;" alt="button"></button></div>
+                    </div>
+                    <div class="addbtns-contener m-0 px-2"><button class="addbtns" id="list_submit" type="submit"><img src="image/done_but.svg" style="border: 0;" alt="button"></button></div>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------------------------------- -->
+        <div class="task-model" id="setting-form">
+            <div class="card-body p-3">
+                <div class="header-style">
+                    <div class="card-title" style="font-size: 1.5rem;">Pomodoro Setting form</div>
+                </div>
+                <div class="body">
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label for="sessions" style="white-space: nowrap;">Intervals: </label>
+                            <input type="text" class="inputs" id="sessions"  autocomplete="off" />
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label for="pomodoroTime" style="white-space: nowrap;">Working Time: </label>
+                            <input type="text" class="inputs" id="pomodoroTime" autocomplete="off" />
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label for="shortBreak" style="white-space: nowrap;">Short Break: </label>
+                            <input type="text" class="inputs" id="shortBreak" autocomplete="off" />
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <label for="longBreak" style="white-space: nowrap;">Long Break: </label>
+                            <input type="text" class="inputs" id="longBreak" autocomplete="off" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="addbtns-contener py-3 mt-xl-1 px-2">
+                <div><button class="addbtns" id="submit_timer" type="submit"><img src="image/done_but.svg" style="border: 0;" alt="button"></button></div>
+                <div><button class="addbtns close-model"><img src="image/cancel.svg" style="border: 0;" alt="button"></button></div>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------------------------------- -->
+        <div class="task-model" id="atomic_display_form">
+            <div class="card-body p-3">
+                <div class="header-style mb-3">
+                    <div class="card-title" style="font-size: 1.5rem;">Your Atomic Habit</div>
+                </div>
+                <div class="body">
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <div id="atitle">habit:</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <div id="aloc">time/location:</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <div id="aso">so i can become:</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;white-space: nowrap;">
+                            <div id="areminder">Reminder:</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;white-space: nowrap;">
+                            <div id="adone">Number of Completed times:</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="addbtns-contener py-0 mt-xl-1 px-2">
+                <div><button class="addbtns close-model"><img src="image/cancel.svg" style="border: 0;" alt="button"></button></div>
+                </div>
+        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl pb-5 my-xl-5 px-2 overflow-auto status carve-left custom-scrollbar todo-container" style="height: 90vh;background-color: #C77C89;" data-status="todo">
+                <div class="fixedposition mb-3 pt-3 pb-3 px-3 text-start"><div class="smaller"><img src="image/todo.svg" alt=""></div></div>
+
+            </div>
+            <div class="col-xl pb-5 my-xl-5 px-2 overflow-auto status carve custom-scrollbar" style="height: 90vh;background-color: #C77C89;" data-status="in-progress">
+            <div class="fixedposition red mb-3 pt-3 pb-3 px-3 text-start"><div class="smaller"><img src="image/progress.svg" alt=""></div></div>
+            </div>
+            <div class="col-xl pb-5 my-xl-5 px-2 overflow-auto status carve-right custom-scrollbar" style="height: 90vh;background-color: #C77C89;" data-status="done">
+                <div class="fixedposition mb-3 pt-3 pb-3 px-3 text-start"><div class="smaller"><img src="image/done.svg" alt=""></div></div>
+            </div>
+            <div class="col-xl " style="height: 90vh;">
+                <div class="col-xl pb-5 mt-xl-5 px-2 status carve custom-scrollbar" style="overflow: hidden; height: 60vh;background-color: #C77C89;border-radius:25px;">
+                    <div class="fixedposition mb-0 pt-3 pb-0 px-3 text-start"><div class="smaller"><img src="image/pomo.svg" alt=""></div></div>
+                    <!-- ------------------------------------------------------------------------------------------------------------- -->
+                    <div class="pomo-container">
+                        <div class="py-0 mt-xl-1 px-2" style="display: flex; flex-wrap: nowrap; flex-direction: column; justify-content: center; align-items: center;">
+                            <!-- pomodoro------------------------------- -->
+                            <div id="timer-container">
+                                <svg width="150" height="150">
+                                    <!-- Gradient definition -->
+                                    <defs>
+                                        <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#07102F" />
+                                            <stop offset="100%" stop-color="#2A7BA0" />
+                                        </linearGradient>
+                                    </defs>
+                                    <!-- Background circle -->
+                                    <circle class="background" cx="75" cy="75" r="67.5"></circle>
+                                    <!-- Progress circle -->
+                                    <circle class="progress" cx="75" cy="75" r="67.5" stroke="url(#progressGradient)"></circle>
+                                    <!-- Endpoint indicator -->
+                                    <circle id="progress-end" cx="75" cy="5" r="5" fill="#4CAF50"></circle>
+                                </svg>
+                                <div id="timer">30:00</div>
+                            </div>                            
+                            <!-- start button--------------------------------------------- -->
+                            <div class="str-button" id="focus" type="button">Focus</div>
+                            <div class="addbtns-contener py-0 mt-xl-1 px-2" style="justify-content: space-evenly;">
+                                <div>
+                                    <button class="addbtns" style="transform: scale(0.75);" data-target-modal="#setting-form" type="button" id="submit">
+                                        <img src="image/Setting.svg" style="border: 0;" alt="button">
+                                    </button>
+                                </div>
+                                <div>
+                                    <button class="addbtns" style="transform: scale(0.75);" type="button" id="rest">
+                                        <img src="image/Restart.svg" style="border: 0;" alt="button">
+                                    </button>
+                                </div>
+                                <div>
+                                    <button class="addbtns" style="transform: scale(0.75);" type="button" id="skip">
+                                        <img src="image/skip.svg" style="border: 0;" alt="button">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -------------------------------------------------------------------------------------------------------------- -->
+                </div>
+                <div class="addbtns-contener py-3 mt-xl-1 px-2" style="height: 30vh;background-color: #C77C89;border-radius:25px;">
+                    <div><button class="addbtns" data-target-modal="#task_form" type="button"><div class="smaller"><img src="image/task_icon.svg" style="border: 0;" alt="button"></div></button></div>
+                    <div><button class="addbtns" data-target-modal="#atomic_form" type="button"><div class="smaller"><img src="image/atomic_icon.svg" style="border: 0;" alt="button"></div></button></div>
+                    <div><button class="addbtns" data-target-modal="#checklist_form" type="button"><div class="smaller"><img src="image/checklist.svg" style="border: 0;" alt="button"></div></button></div>
+                    <div><button class="addbtns" data-target-modal="#paragraph_form" type="button"><div class="smaller"><img src="image/paragaph_icon.svg" style="border: 0;" alt="button"></div></button></div>
+                    <div><button class="addbtns" data-target-modal="#list_form" type="button"><div class="smaller"><img src="image/Pointedlist_icon.svg" style="border: 0;" alt="button"></div></button></div>
+                    <div><button class="addbtns" data-target-modal="#deadline_form" type="button"><div class="smaller"><img src="image/deadline.svg" style="border: 0;" alt="button"></div></button></div>
+                </div>
+            </div>
+        </div>
+          </div>
+    <div id="overlay"></div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js.map"></script>
+    <script src="js/java.js"></script>
+    <audio id="timer-end-sound" src="C:\Users\Abanoub\Desktop\topomo\music\creepy-bell-fx-246592.mp3"></audio>
+    <audio id="alarm_sound_track" src="C:\Users\Abanoub\Desktop\topomo\music\mixkit-sound-alert-in-hall-1006.wav"></audio>
+    </body>
+</html>
